@@ -1,0 +1,45 @@
+
+body {
+  margin: 30px 70px;
+}
+
+.grid {
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+
+.card,
+.back,
+.front {
+  height: 128px;
+  width: 128px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+  background: black;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.selected {
+  transform: rotateY(180deg);
+}
+
+.match .front {
+  background: goldenrod !important;
+}
